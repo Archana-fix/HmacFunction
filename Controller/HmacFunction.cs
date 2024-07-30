@@ -21,7 +21,7 @@ namespace AzureHmac.Controller
 
         [Function("GenerateHMAC")]
         public async Task<HttpResponseData> GenerateHMAC(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "generate-hmac")] HttpRequestData req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "generate-hmac")] HttpRequestData req)
         {
             _logger.LogInformation("GenerateHMAC function processed a request from main");
 
